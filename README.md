@@ -23,6 +23,7 @@ Mathematical solution is around 400 times faster than simulation when solving fo
 
 To further improve speed and allow interactivity, 2D visualization functions can cache their results in truelCache.npz (using preCalc). Initial 'run all cells' in Jupyter notebook will need around 20 min to calculate entire document when cache does not exist. Future 'run all cells' would need just around minute, mostly for numba (re)compilation, since large data for 2D graphs will be used from cache.
 
+Since GitHub does not allow large files, precalculated cache file is not in repository. It is optional anyway, since it is recreated upon first document calculation, but could save initial 45 min. Precalculated cache file is included in [ZIP file at this link](https://gmnenad.com/wp-content/uploads/2021/04/Truel.7z) (under 40 MB) along with files present in this git repository.
 
 Language used in JupyterLab document is Python ( **Python 3.8** ), and only used package that was sensitive to version is Numba ( updated for **numba 0.53.1** )
 
