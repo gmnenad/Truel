@@ -22,3 +22,5 @@ Solution is fast enough to be interactive even for visualization ( where million
 Mathematical solution is around 400 times faster than simulation when solving for predefined targets, and over 2000 times faster when finding optimal targets in truel scenarios. To improve speed, Numba accelerated Python functions are used, along with 'smart' optimizations for AB graph that use dynamic interpolation/calculation. 
 
 To further improve speed and allow interactivity, 2D visualization functions can cache their results in truelCache.npz (using preCalc). Initial 'run all cells' in Jupyter notebook will need around 20 min to calculate entire document when cache does not exist. Future 'run all cells' would need just around minute, mostly for numba (re)compilation, since large data for 2D graphs will be used from cache.
+
+Code and resulting analyses from this document are free for use, as long as original source is mentioned.
