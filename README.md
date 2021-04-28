@@ -8,7 +8,6 @@ Truel problem is an old problem/puzzle which can be summarized as :
 Files in this project:
 - **Truel.ipynb** : main Jupyter document, contains python code and analysis of Truel options 
 - Truel.html : HTML representation of document. Not necessary - can be recreated from ipynb  [optional]
-- truelCache.npz : cache file to hold/use precalculated 2D data. Not necessary - autocreated by ipynb (~20min) [optional]
 
 This document presents solutions and analysis of different scenarios for "classical truel" problem - one where players can have different probabilities to hit, shoot sequentially with infinite number of bullets, and where missing is allowed. 
 
@@ -20,4 +19,6 @@ It contains several notable elements:
 
 Solution is fast enough to be interactive even for visualization ( where millions of individual pixels/solutions need to be calculated in short time to present AB graph with all possible hit probabilities for players A and B ). That speed was achieved by implementing default solution using mathematical calculations, while still providing option for conventional solution using simulation. Solutions support not only finding win probabilities for players with predefined initial targets, but also finding actual optimal targets. 
 
-Mathematical solution is around 400 times faster than simulation when solving for predefined targets, and over 2000 times faster when finding optimal targets in truel scenarios. To improve speed, Numba accelerated Python functions are used, along with 'smart' optimizations for AB graph that use dynamic interpolation/calculation. To further improve speed and allow interactivity, 2D visualization functions have an option to cache their results in truelCache.npz ( using preCalc), to allow fast 'run all cells' in Jupyter notebook.
+Mathematical solution is around 400 times faster than simulation when solving for predefined targets, and over 2000 times faster when finding optimal targets in truel scenarios. To improve speed, Numba accelerated Python functions are used, along with 'smart' optimizations for AB graph that use dynamic interpolation/calculation. 
+
+To further improve speed and allow interactivity, 2D visualization functions can cache their results in truelCache.npz (using preCalc). Initial 'run all cells' in Jupyter notebook will need around 20 min to calculate entire document when cache does not exist. Future 'run all cells' would need just around minute, mostly for numba (re)compilation, since large data for 2D graphs will be used from cache.
