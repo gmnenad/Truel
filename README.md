@@ -8,8 +8,7 @@ Truel problem is an old problem/puzzle which can be summarized as :
 Files in this project:
 - **Truel.ipynb** : main Jupyter document, contains python code and analysis of Truel options 
 - Truel.html : HTML representation of document. Not necessary - can be recreated from ipynb  [optional]
-- exportTruel.ipynb : short code to export Truel.ipynb to Truel.html ( while hiding unneeded cells ) [optional]
-- truelCache.npz : cache file to hold/use precalculated 2D data. Not necessary - autocreated by Tryel.ipynb (~20min) [optional]
+- truelCache.npz : cache file to hold/use precalculated 2D data. Not necessary - autocreated by ipynb (~20min) [optional]
 
 This document presents solutions and analysis of different scenarios for "classical truel" problem - one where players can have different probabilities to hit, shoot sequentially with infinite number of bullets, and where missing is allowed. 
 
